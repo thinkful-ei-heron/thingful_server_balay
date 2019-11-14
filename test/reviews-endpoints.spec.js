@@ -42,7 +42,6 @@ describe('Reviews Endpoints', function() {
         rating: 3,
         thing_id: testThing.id,
       }
-      console.log(helpers.makeAuthHeader(testUsers[0]))
       return supertest(app)
         .post('/api/reviews')
         .set('Authorization', helpers.makeAuthHeader(testUsers[0]))
